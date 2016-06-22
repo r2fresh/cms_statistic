@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/main.css" charset="utf-8">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/7fe5948e7d.js"></script>;
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">KT Membership 통계</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">관리자</a></li>
+            <li class="active"><a href="./">로그아웃</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container-fluid" style="margin-top:50px;padding-top:20px;">
+
+      <div class="row">
+        <div class="col-md-2">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">접속자 통계 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">로그인ID 접속통계</a></li>
+            <li><a href="#">KT 멤버십 가입통계</a></li>
+            <li><a href="#">LTE 데이터 신청통계</a></li>
+            <li>
+              <a href="#">페이지별통계</a>
+              <ul class="nav">
+                <li class=""><a href="#navbar-default">HOT</a></li>
+                <li class=""><a href="#navbar-brand-image">더블할인 멤버</a></li>
+                <li class=""><a href="#navbar-forms">VIP 초이스</a></li>
+                <li class=""><a href="#navbar-buttons">VIP(ORI)</a></li>
+                <li class=""><a href="#navbar-text">DOWN</a></li>
+                <li class=""><a href="#navbar-links">UP</a></li>
+                <li class=""><a href="#navbar-component-alignment">FREE</a></li>
+                <li class=""><a href="#navbar-fixed-top">LNB</a></li>
+                <li class=""><a href="#navbar-fixed-bottom">EVENT</a></li>
+                <li class=""><a href="#navbar-static-top">영화</a></li>
+                <li class="active"><a href="#navbar-inverted">글로벌 바우처</a></li>
+                <li class="active"><a href="#navbar-inverted">마이페이지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10" style="margin-left:-100px">
+          <div class="row" style="margin-bottom:20px;">
+
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+
+                  <a href="#"><strong>접속자 통계</strong></a>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-xs">더보기</a>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 일별
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 월별
+                      </label>
+                    </div>
+                    <div class="col-md-6 text-right">
+                      <button class="btn btn-default btn-xs"><i class="fa fa-table" aria-hidden="true"></i></button>
+                      <button class="btn btn-default btn-xs"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table -->
+                <table class="table table-bordered">
+                   <thead>
+                     <tr>
+                       <th></th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <th scope="row">고유사용자수</th>
+                       <td>1,000,000</td>
+                       <td>1,000,000</td>
+                       <td>1,000,000</td>
+                       <td>1,000,000</td>
+                       <td>1,000,000</td>
+                       <td>1,000,000</td>
+                       <td>1,000,000</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">사용자수</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">페이지뷰</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                   </tbody>
+                 </table>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+
+                  <a href="#"><strong>로그인통계</strong></a>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-xs">더보기</a>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12 text-right">
+                      <button class="btn btn-default btn-xs"><i class="fa fa-table" aria-hidden="true"></i></button>
+                      <button class="btn btn-default btn-xs"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table -->
+                <table class="table table-bordered">
+                   <thead>
+                     <tr>
+                       <th></th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <th scope="row">고유사용자수</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">사용자수</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">페이지뷰</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                   </tbody>
+                 </table>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row" style="margin-bottom:20px;">
+
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+
+                  <a href="#"><strong>KT 멤버십가입통계</strong></a>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-xs">더보기</a>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+
+                    <div class="col-md-12 text-right">
+                      <button class="btn btn-default btn-xs"><i class="fa fa-table" aria-hidden="true"></i></button>
+                      <button class="btn btn-default btn-xs"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table -->
+                <table class="table table-bordered">
+                   <thead>
+                     <tr>
+                       <th></th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <th scope="row">가입자</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+
+                   </tbody>
+                 </table>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+
+                  <a href="#"><strong>LTE 데이터 신청 통계</strong></a>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-xs">더보기</a>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12 text-right">
+                      <button class="btn btn-default btn-xs"><i class="fa fa-table" aria-hidden="true"></i></button>
+                      <button class="btn btn-default btn-xs"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table -->
+                <table class="table table-bordered">
+                   <thead>
+                     <tr>
+                       <th></th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <th scope="row">성공</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">실패</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">합계</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                   </tbody>
+                 </table>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row" style="margin-bottom:20px;">
+
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+
+                  <a href="#"><strong>페이지별 통계</strong></a>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-xs">더보기</a>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 일별
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 월별
+                      </label>
+                    </div>
+                    <div class="col-md-6 text-right">
+                      <button class="btn btn-default btn-xs"><i class="fa fa-table" aria-hidden="true"></i></button>
+                      <button class="btn btn-default btn-xs"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table -->
+                <table class="table table-bordered">
+                   <thead>
+                     <tr>
+                       <th>페이지명</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                       <th>2016<br>06/01</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <th scope="row">고유사용자수</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">사용자수</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">페이지뷰</th>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                       <td>100</td>
+                     </tr>
+                   </tbody>
+                 </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+  </body>
+</html>
