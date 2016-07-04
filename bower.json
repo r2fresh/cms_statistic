@@ -1,0 +1,22 @@
+{
+  "name": "kt-membership-statistic",
+  "description": "KT의 맵버십의 통계",
+  "main": "main.js",
+  "authors": [
+    "r2fresh"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/r2fresh/cms_statistic",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib/",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery-1.9.1": "https://code.jquery.com/jquery-1.9.1.js"
+  }
+}

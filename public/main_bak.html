@@ -19,15 +19,13 @@
     <!-- <script src="../node_modules/jquery/dist/jquery.js"></script> -->
     <script src="./lib/jquery-1.9.1/index.js" charset="utf-8"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../node_modules/admin-lte/dist/js/app.js"></script>
-
 
     <!-- <link rel="stylesheet" href="./dist/css/bootstrap-material-design.css">
     <link rel="stylesheet" href="./dist/css/ripples.css"> -->
   </head>
-  <body class="skin-red sidebar-mini">
+  <body class="skin-blue sidebar-mini">
 
-    <!-- <nav class="navbar navbar-fixed-top navbar-inverse">
+    <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -49,38 +47,11 @@
             <li><a href="../navbar/">관리자</a></li>
             <li class="active"><a href="./">로그아웃</a></li>
           </ul>
-        </div>
-      </div><
-    </nav> -->
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav>
 
     <div class="wapper">
-      <header class="main-header">
-        <!-- Logo -->
-        <a href="index2.html" class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>KT-Membership</b> 통계</span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top">
-          <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-          </a>
-
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <li>
-                <a href="#" data-toggle="control-sidebar"><strong>관리자</strong></a>
-              </li>
-              <li>
-                <a href="#" data-toggle="control-sidebar"><i class="fa fa-sign-out"></i><strong> 로그아웃</strong></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
       <aside class="main-sidebar">
       <!-- sidebar: style can be found in sidebar.less -->
       <section class="sidebar" style="height: auto;">
@@ -126,27 +97,10 @@
               <i class="fa fa-th"></i> <span>사용자</span>
             </a>
           </li>
-          <li class="treeview">
-            <a href="#">
+          <li>
+            <a href="pages/widgets.html">
               <i class="fa fa-th"></i> <span>메뉴별</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
             </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>HOT</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>더블할인 멥버십</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>VIP 초이스</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>VIP(ORI)</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>DOWN</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>UP</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>FREE</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>LNB</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>EVENT</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>영화</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>글로벌 바우처</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>마이페이지</a></li>
-            </ul>
           </li>
           <li>
             <a href="pages/widgets.html">
@@ -158,7 +112,6 @@
               <i class="fa fa-th"></i> <span>LTE 데이터 신청 성공, 실패수</span>
             </a>
           </li>
-
 
 
 
@@ -322,8 +275,10 @@
       </section>
       <!-- /.sidebar -->
     </aside>
+    </div>
 
-    <div class="content-wrapper">
+
+    <div class="content-wapper">
       <section class="content">
         <div class="row" style="margin-bottom:20px;">
 
@@ -685,9 +640,46 @@
     </div>
 
 
+
+    <div class="container-fluid" style="margin-top:50px;padding-top:20px;">
+
+      <div class="row">
+        <div class="col-md-2">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">접속자 통계 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">로그인ID 접속통계</a></li>
+            <li><a href="#">KT 멤버십 가입통계</a></li>
+            <li><a href="#">LTE 데이터 신청통계</a></li>
+            <li>
+              <a href="#">페이지별통계</a>
+              <ul class="nav">
+                <li class=""><a href="#navbar-default">HOT</a></li>
+                <li class=""><a href="#navbar-brand-image">더블할인 멤버</a></li>
+                <li class=""><a href="#navbar-forms">VIP 초이스</a></li>
+                <li class=""><a href="#navbar-buttons">VIP(ORI)</a></li>
+                <li class=""><a href="#navbar-text">DOWN</a></li>
+                <li class=""><a href="#navbar-links">UP</a></li>
+                <li class=""><a href="#navbar-component-alignment">FREE</a></li>
+                <li class=""><a href="#navbar-fixed-top">LNB</a></li>
+                <li class=""><a href="#navbar-fixed-bottom">EVENT</a></li>
+                <li class=""><a href="#navbar-static-top">영화</a></li>
+                <li class="active"><a href="#navbar-inverted">글로벌 바우처</a></li>
+                <li class="active"><a href="#navbar-inverted">마이페이지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="col-md-10" style="margin-left:-80px"> -->
+        <div class="col-md-10">
+
+        </div>
+      </div>
+
+
+
+
+
     </div>
-
-
 
   </body>
 </html>
