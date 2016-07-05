@@ -18,5 +18,8 @@
   ],
   "devDependencies": {
     "jquery-1.9.1": "https://code.jquery.com/jquery-1.9.1.js"
+  },
+  "dependencies": {
+    "c3": "^0.4.11"
   }
 }

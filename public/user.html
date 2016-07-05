@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../node_modules/admin-lte/dist/css/AdminLTE.css">
     <link rel="stylesheet" href="../node_modules/admin-lte/dist/css/skins/_all-skins.css">
 
+    <link href="./lib/c3/c3.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="./css/main.css" charset="utf-8">
 
     <!-- Latest compiled and minified JavaScript -->
@@ -20,6 +22,11 @@
     <script src="./lib/jquery-1.9.1/index.js" charset="utf-8"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../node_modules/admin-lte/dist/js/app.js"></script>
+
+    <!-- Load d3.js and c3.js -->
+    <script src="./lib/d3/d3.js"></script>
+    <script src="./lib/c3/c3.js"></script>
+
 
 
     <!-- <link rel="stylesheet" href="./dist/css/bootstrap-material-design.css">
@@ -335,23 +342,21 @@
         </ol>
       </section>
       <section class="content">
-        <div class="row" style="margin-bottom:20px;">
 
-          <div class="col-md-6">
+        <div class="row" style="margin-bottom:20px;">
+          <div class="col-md-12">
+
             <div class="panel panel-default">
               <!-- Default panel contents -->
               <div class="panel-heading">
 
-                <a href="#"><strong>UV(Unique Visit)</strong></a>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-xs">더보기</a>
-                </div>
-              </div>
-              <div class="panel-body">
                 <div class="row">
                   <div class="col-md-6">
                     <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 일별
+                      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 시간별
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 일별
                     </label>
                     <label class="radio-inline">
                       <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 월별
@@ -364,250 +369,140 @@
                 </div>
               </div>
 
-              <!-- Table -->
-              <table class="table table-bordered">
-                 <thead>
-                   <tr>
-                     <th></th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                   </tr>
-                 </thead>
-                 <tbody>
-                   <tr style="font-size:12px;">
-                     <th scope="row">고유사용자수</th>
-                     <td>1,000,000</td>
-                     <td>1,000,000</td>
-                     <td>1,000,000</td>
-                     <td>1,000,000</td>
-                     <td>1,000,000</td>
-                     <td>1,000,000</td>
-                     <td>1,000,000</td>
-                   </tr>
-                   <tr>
-                     <th scope="row">사용자수</th>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                   </tr>
-                   <tr>
-                     <th scope="row">페이지뷰</th>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                   </tr>
-                 </tbody>
-               </table>
             </div>
-          </div>
 
-          <div class="col-md-6">
+          </div>
+        </div>
+
+
+
+        <div class="row" style="margin-bottom:20px;">
+
+          <div class="col-md-12">
             <div class="panel panel-default">
               <!-- Default panel contents -->
               <div class="panel-heading">
 
-                <a href="#"><strong>방문자수</strong></a>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-xs">더보기</a>
-                </div>
+                <a href="#"><strong>LIST</strong></a>
               </div>
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-md-12 text-right">
-                    <button class="btn btn-default btn-xs"><i class="fa fa-table" aria-hidden="true"></i></button>
-                    <button class="btn btn-default btn-xs"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Table -->
               <table class="table table-bordered">
                  <thead>
                    <tr>
                      <th></th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
+                     <th>UV</th>
+                     <th>방문자수</th>
+                     <th>클릭수</th>
+                     <th>체류시간</th>
                    </tr>
                  </thead>
                  <tbody>
                    <tr>
-                     <th scope="row">고유사용자수</th>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
+                     <td scope="row"><strong>2016-07-01</strong></td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
                    </tr>
                    <tr>
-                     <th scope="row">사용자수</th>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
+                     <td scope="row"><strong>2016-07-01</strong></td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
                    </tr>
                    <tr>
-                     <th scope="row">페이지뷰</th>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
+                     <td scope="row"><strong>2016-07-01</strong></td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                   </tr>
+                   <tr>
+                     <td scope="row"><strong>2016-07-01</strong></td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                   </tr>
+                   <tr>
+                     <td scope="row"><strong>2016-07-01</strong></td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                   </tr>
+                   <tr>
+                     <td scope="row"><strong>2016-07-01</strong></td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                   </tr>
+                   <tr>
+                     <td scope="row"><strong>2016-07-01</strong></td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                   </tr>
+                   <tr>
+                     <td scope="row"><strong>2016-07-01</strong></td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                   </tr>
+                   <tr>
+                     <td scope="row"><strong>2016-07-01</strong></td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
+                     <td>1,000,000</td>
                    </tr>
                  </tbody>
                </table>
+
+
+
+              <div class="panel-footer text-right bg-white" style="background-color:#fff">
+                <div class="btn-group" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-default">1</button>
+                   <button type="button" class="btn btn-default">2</button>
+                   <button type="button" class="btn btn-default">3</button>
+                   <button type="button" class="btn btn-default">4</button>
+                   <button type="button" class="btn btn-default">5</button>
+                    <button type="button" class="btn btn-default">6</button>
+                    <button type="button" class="btn btn-default">7</button>
+                    <button type="button" class="btn btn-default">8</button>
+                    <button type="button" class="btn btn-default">9</button>
+                     <button type="button" class="btn btn-default">10</button>
+                 </div>
+              </div>
+
+
             </div>
           </div>
+
+
 
         </div>
 
         <div class="row" style="margin-bottom:20px;">
-
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="panel panel-default">
               <!-- Default panel contents -->
               <div class="panel-heading">
-
-                <a href="#"><strong>클릭수</strong></a>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-xs">더보기</a>
-                </div>
-              </div>
-              <div class="panel-body">
-                <div class="row">
-
-                  <div class="col-md-12 text-right">
-                    <button class="btn btn-default btn-xs"><i class="fa fa-table" aria-hidden="true"></i></button>
-                    <button class="btn btn-default btn-xs"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
-                  </div>
-                </div>
+                <a href="#"><strong>Chart</strong></a>
               </div>
 
               <!-- Table -->
-              <table class="table table-bordered">
-                 <thead>
-                   <tr>
-                     <th></th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                   </tr>
-                 </thead>
-                 <tbody>
-                   <tr>
-                     <th scope="row">가입자</th>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                   </tr>
+              <div id="user_chart"></div>
 
-                 </tbody>
-               </table>
             </div>
           </div>
-
-          <div class="col-md-6">
-            <div class="panel panel-default">
-              <!-- Default panel contents -->
-              <div class="panel-heading">
-
-                <a href="#"><strong>체류시간</strong></a>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-xs">더보기</a>
-                </div>
-              </div>
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-md-12 text-right">
-                    <button class="btn btn-default btn-xs"><i class="fa fa-table" aria-hidden="true"></i></button>
-                    <button class="btn btn-default btn-xs"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Table -->
-              <table class="table table-bordered">
-                 <thead>
-                   <tr>
-                     <th></th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                     <th>2016<br>06/01</th>
-                   </tr>
-                 </thead>
-                 <tbody>
-                   <tr>
-                     <th scope="row">성공</th>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                   </tr>
-                   <tr>
-                     <th scope="row">실패</th>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                   </tr>
-                   <tr>
-                     <th scope="row">합계</th>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                     <td>100</td>
-                   </tr>
-                 </tbody>
-               </table>
-            </div>
-          </div>
-
         </div>
+
+
 
 
 
@@ -619,6 +514,18 @@
     </div>
 
 
-
+  <script>
+      var chart = c3.generate({
+      bindto: '#user_chart',
+      data: {
+        columns: [
+          ['UV', 30, 200, 100, 400, 150, 250,50, 20, 10, 40, 15, 25,40, 100, 100, 320, 120, 220,550, 20, 103, 40, 125, 25,10, 40, 15, 25,40, 100],
+          ['방문자수', 50, 20, 10, 40, 15, 25],
+          ['클릭수', 40, 100, 100, 320, 120, 220],
+          ['체류시간', 550, 20, 103, 40, 125, 25]
+        ]
+      }
+    });
+  </script>
   </body>
 </html>
