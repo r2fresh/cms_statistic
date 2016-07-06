@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../node_modules/admin-lte/dist/css/AdminLTE.css">
     <link rel="stylesheet" href="../node_modules/admin-lte/dist/css/skins/_all-skins.css">
 
+    <link rel="stylesheet" href="./lib/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
     <link href="./lib/c3/c3.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="./css/main.css" charset="utf-8">
@@ -21,12 +23,17 @@
     <!-- <script src="../node_modules/jquery/dist/jquery.js"></script> -->
     <script src="./lib/jquery-1.9.1/index.js" charset="utf-8"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="./lib/moment/moment.js"></script>
+    <script src="./lib/moment/locale/ko.js"></script>
+
+    <script type="text/javascript" src="./lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
     <script src="../node_modules/admin-lte/dist/js/app.js"></script>
 
     <!-- Load d3.js and c3.js -->
     <script src="./lib/d3/d3.js"></script>
     <script src="./lib/c3/c3.js"></script>
-
 
 
     <!-- <link rel="stylesheet" href="./dist/css/bootstrap-material-design.css">
@@ -343,7 +350,7 @@
       </section>
       <section class="content">
 
-        <div class="row" style="margin-bottom:20px;">
+        <div class="row">
           <div class="col-md-12">
 
             <div class="panel panel-default">
@@ -351,20 +358,40 @@
               <div class="panel-heading">
 
                 <div class="row">
-                  <div class="col-md-6">
-                    <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 시간별
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 일별
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 월별
-                    </label>
+                  <div class="col-md-8">
+
+
+                    <div class="form-inline">
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 시간별
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 일별
+                      </label>
+                      <label class="radio-inline" style="margin-right:20px;">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 월별
+                      </label>
+                      <!-- <div class="form-inline"> -->
+                          <div class='input-group date' id='datetimepicker10'>
+                              <input type='text' class="form-control" />
+                              <span class="input-group-addon">
+                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                              </span>
+                          </div>
+                          ~
+                          <div class='input-group date' id='datetimepicker11'>
+                              <input type='text' class="form-control" />
+                              <span class="input-group-addon">
+                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                              </span>
+                          </div>
+                          <button type="button" class="btn btn-primary">검색</button>
+                      <!-- </div> -->
+                    </div>
                   </div>
-                  <div class="col-md-6 text-right">
-                    <button class="btn btn-default btn-xs"><i class="fa fa-table" aria-hidden="true"></i></button>
-                    <button class="btn btn-default btn-xs"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
+                  <div class="col-md-4 text-right">
+                    <button class="btn btn-default btn-cm"><i class="fa fa-table" aria-hidden="true"></i></button>
+                    <button class="btn btn-default btn-cm"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
                   </div>
                 </div>
               </div>
@@ -373,6 +400,67 @@
 
           </div>
         </div>
+
+        <!-- <div class="row">
+
+          <div class="col-md-12">
+            <div class="panel panel-default">
+
+              <div class="panel-heading">
+
+                <div class="row">
+                  <div class="col-md-2">
+                  </div>
+                  <div class="col-md-8 text-center">
+                    <form class="form-horizontal">
+                      <div class="form-inline">
+
+                            <div class='input-group date' id='datetimepicker10'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            ~
+                            <div class='input-group date' id='datetimepicker11'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <button type="button" class="btn btn-primary">검색</button>
+
+                      </div>
+                  </form>
+                  </div>
+                  <script type="text/javascript">
+
+                  </script>
+                  <div class="col-md-2">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div> -->
+        <!-- <div class="container">
+          <div class="col-sm-6" style="height:130px;">
+              <div class="form-group">
+                  <div class='input-group date' id='datetimepicker10'>
+                      <input type='text' class="form-control" />
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-cal  endar">
+                          </span>
+                      </span>
+                  </div>
+              </div>
+          </div>
+
+      </div> -->
+
 
 
 
@@ -525,6 +613,17 @@
           ['체류시간', 550, 20, 103, 40, 125, 25]
         ]
       }
+    });
+    $(function () {
+        $('#datetimepicker10').datetimepicker({
+            viewMode: 'days',
+            format: 'DD/MM/YYYY',
+            locale: 'ko'
+        });
+        $('#datetimepicker11').datetimepicker({
+            viewMode: 'days',
+            format: 'DD/MM/YYYY'
+        });
     });
   </script>
   </body>

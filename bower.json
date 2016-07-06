@@ -20,6 +20,8 @@
     "jquery-1.9.1": "https://code.jquery.com/jquery-1.9.1.js"
   },
   "dependencies": {
-    "c3": "^0.4.11"
+    "c3": "^0.4.11",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37",
+    "moment": "^2.14.1"
   }
 }

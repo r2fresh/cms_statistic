@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server",
+    "server": "node ./bin/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,6 +33,7 @@
   "dependencies": {
     "admin-lte": "^2.3.5",
     "bootstrap-material-design": "^0.5.10",
+    "express": "^4.14.0",
     "json-loader": "^0.5.4",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
