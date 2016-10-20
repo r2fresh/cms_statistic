@@ -4,7 +4,7 @@
   "description": "CMS 통계 부분 개발",
   "main": "app.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server",
+    "start": "node_modules/.bin/webpack-dev-server --inline",
     "server": "node ./bin/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
